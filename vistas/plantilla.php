@@ -114,23 +114,44 @@ CUERPO DOCUMENTO
 
       if($_GET["ruta"] == "inicio" ||
 
-         ($_GET["ruta"] == "usuarios" && $_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador")||
-         ($_GET["ruta"] == "materia" && (($_SESSION["esta_materias"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador")))||
-         ($_GET["ruta"] == "estudiantes" && (($_SESSION["esta_estudiante"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
-         ($_GET["ruta"] == "plandeestudios" && (($_SESSION["esta_plan_estudio"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
-         ($_GET["ruta"] == "inscribir" && (($_SESSION["esta_materias"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
-         ($_GET["ruta"] == "boleta" && (($_SESSION["esta_estudiante"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
-         ($_GET["ruta"] == "reporte" && (($_SESSION["esta_estudiante"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
-         ($_GET["ruta"] == "corespinterna" && (($_SESSION["esta_correspondencia"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
-         ($_GET["ruta"] == "corespexterna" && (($_SESSION["esta_correspondencia"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
-         ($_GET["ruta"] == "cartapdf" && (($_SESSION["esta_correspondencia"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
-         ($_GET["ruta"] == "admacces" &&  ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador")) ||
-         ($_GET["ruta"] == "listadeplandeestudio" && (($_SESSION["esta_plan_estudio"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
-         ($_GET["ruta"] == "listaplan" && (($_SESSION["esta_plan_estudio"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
-         ($_GET["ruta"] == "galeria" && (($_SESSION["esta_estudiante"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
-         ($_GET["ruta"] == "historialcartainterna" && (($_SESSION["esta_correspondencia"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
-         ($_GET["ruta"] == "historialcartaexterna" && (($_SESSION["esta_correspondencia"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador")))||
-         $_GET["ruta"] == "salir"){
+        //  ($_GET["ruta"] == "usuarios" && $_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador")||
+        //  ($_GET["ruta"] == "materia" && (($_SESSION["esta_materias"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador")))||
+        //  ($_GET["ruta"] == "estudiantes" && (($_SESSION["esta_estudiante"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
+        //  ($_GET["ruta"] == "plandeestudios" && (($_SESSION["esta_plan_estudio"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
+        //  ($_GET["ruta"] == "inscribir" && (($_SESSION["esta_materias"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
+        //  ($_GET["ruta"] == "boleta" && (($_SESSION["esta_estudiante"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
+        //  ($_GET["ruta"] == "reporte" && (($_SESSION["esta_estudiante"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
+        //  ($_GET["ruta"] == "corespinterna" && (($_SESSION["esta_correspondencia"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
+        //  ($_GET["ruta"] == "corespexterna" && (($_SESSION["esta_correspondencia"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
+        //  ($_GET["ruta"] == "cartapdf" && (($_SESSION["esta_correspondencia"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
+        //  ($_GET["ruta"] == "admacces" &&  ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador")) ||
+        //  ($_GET["ruta"] == "listadeplandeestudio" && (($_SESSION["esta_plan_estudio"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
+        //  ($_GET["ruta"] == "listaplan" && (($_SESSION["esta_plan_estudio"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
+        //  ($_GET["ruta"] == "galeria" && (($_SESSION["esta_estudiante"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
+        //  ($_GET["ruta"] == "historialcartainterna" && (($_SESSION["esta_correspondencia"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador"))) ||
+        //  ($_GET["ruta"] == "historialcartaexterna" && (($_SESSION["esta_correspondencia"] == 1) || ($_SESSION["esta_superu"] == 1 && $_SESSION["perfil"] == "Administrador")))||
+        //  $_GET["ruta"] == "salir"
+
+        $_GET["ruta"] == "usuarios"||
+        $_GET["ruta"] == "materia"||
+        $_GET["ruta"] == "estudiantes"||
+        $_GET["ruta"] == "plandeestudios"||
+        $_GET["ruta"] == "inscribir"||
+        $_GET["ruta"] == "boleta"||
+        $_GET["ruta"] == "reporte" ||
+        $_GET["ruta"] == "corespinterna"||
+        $_GET["ruta"] == "corespexterna"||
+        $_GET["ruta"] == "cartapdf"||
+        $_GET["ruta"] == "admacces"||
+        $_GET["ruta"] == "listadeplandeestudio"||
+        $_GET["ruta"] == "listaplan"||
+        $_GET["ruta"] == "galeria"||
+        $_GET["ruta"] == "historialcartainterna"||
+        $_GET["ruta"] == "historialcartaexterna"||
+        $_GET["ruta"] == "salir"
+
+         
+         ){
         include "modulos/".$_GET["ruta"].".php";
       }else{
         include "modulos/404.php";
